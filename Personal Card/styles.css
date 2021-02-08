@@ -1,0 +1,102 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html, body, main  {
+  height: 100%;
+}
+
+body{
+  background: url('./bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#card{
+  height: 25rem;
+  width: 20rem;
+  background-color: rgba(148, 152, 182, 0.315);
+  border-radius: 20px;
+  backdrop-filter: blur(1px);
+  position: relative;
+  box-shadow: 10px 10px 30px rgb(49, 47, 47);
+}
+
+#image-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+#profile{
+  height: 10rem;
+  border-radius: 50%;
+}
+
+#card h1, #card h2{
+  text-align: center;
+}
+
+#card h1{
+  font-size: 2rem;
+  margin: 1rem 0 0;
+}
+
+#card h2{
+  font-weight: 300;
+}
+
+a img{
+  height: 3rem;
+}
+
+#social-media{
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+}
+
+ul{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+li{
+  list-style: none;
+}
+
+li:nth-child(3) a img{
+  height: 3.7rem;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  background-color: rgba(148, 152, 182, 0.315);
+  border-radius: 20px;
+  backdrop-filter: blur(1px);  
+  height: 5.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+footer a{
+  text-decoration: none;
+}
+
+footer p{
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+
