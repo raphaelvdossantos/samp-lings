@@ -1,0 +1,22 @@
+$color-map: (
+  "dark-bg": #0B090A,
+  "clear-lettering": #DCD6CE,
+  "clear-bg": #FEF9F2,
+  "dark-lettering": #0B090A,
+);
+
+$fontSize-map: (
+  "sm": 1rem,
+  "md": 4.5rem,
+  "bg": 7rem,
+  "lg": 10rem,
+);
+
+
+@function color($color-name){
+  @return map-get($color-map, $color-name )
+};
+
+@function fontSize($fontSize-number){
+  @return map-get($fontSize-map , $fontSize-number )
+}
