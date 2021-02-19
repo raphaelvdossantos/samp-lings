@@ -5,6 +5,8 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/*  Here we put our color variables for the light theme
+We then use this variables throughout our website */
 html{
   --bg:#52d4eb;
   --bg-darker: #24b7d1;
@@ -13,6 +15,8 @@ html{
   --switch-on: #009cb8;
 }
 
+/* The color variables are overwritten here
+when we change our theme to dark mode */ 
 html[data-theme="dark"]{
   --bg:#1e3852;
   --bg-darker: #0d2136;
@@ -21,6 +25,13 @@ html[data-theme="dark"]{
   --switch-on: #01070d;
 }
 
+/* If your main theme is dark then all you need to do is
+to change orders overwriting the variables using
+data-theme="light" */
+
+
+/* Here are smoothing the transition between themes
+this will be later used by the JS :D */
 html.transition,
 html.transition *,
 html.transition *:before,
