@@ -1,0 +1,117 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*  Here we put our color variables for the light theme
+We then use this variables throughout our website */
+html{
+  --bg:#52d4eb;
+  --bg-darker: #24b7d1;
+  --text: rgb(233, 245, 247);
+  --switch-off: #cad6d9;
+  --switch-on: #009cb8;
+}
+
+/* The color variables are overwritten here
+when we change our theme to dark mode */ 
+html[data-theme="dark"]{
+  --bg:#1e3852;
+  --bg-darker: #0d2136;
+  --text: rgb(233, 245, 247);
+  --switch-off: #cad6d9;
+  --switch-on: #01070d;
+}
+
+/* If your main theme is dark then all you need to do is
+to change orders overwriting the variables using
+data-theme="light" */
+
+
+/* Here are smoothing the transition between themes
+this will be later used by the JS :D */
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms;
+  transition-delay: 0;
+}
+
+html, body, .container{
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg);
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.card{
+  width: 500px;
+  height: 200px;
+  position: relative;
+  background: var(--bg-darker);
+  border-radius: 15px;
+  padding: 35px;
+  color: var(--text);
+  backdrop-filter: blur(20px);
+}
+
+.card h1{
+  float: left;
+}
+
+.card p{
+  clear: both;
+  margin-top: 6vh;
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 52px;
+	height: 27px;
+	background: var(--switch-off);
+	float: right;
+	border-radius: 100px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background-color: var(--switch-on);
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+  
+}
+
+label:active:after {
+	width: 45px;
+}
