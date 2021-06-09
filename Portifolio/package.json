@@ -1,0 +1,33 @@
+{
+  "name": "portifolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "json-server": "^0.16.3",
+    "mongodb": "^3.6.8",
+    "mongoose": "^5.12.10"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.14.2",
+    "css-loader": "^5.2.5",
+    "file-loader": "^6.2.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "database": "json-server --watch ./db/db.json",
+    "start": "webpack serve --open",
+    "build": "webpack --config webpack.config.js",
+    "prod": "webpack --config prod.config.js"
+  },
+  "proxy": "localhost:4000",
+  "author": "",
+  "license": "ISC"
+}

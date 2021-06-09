@@ -12,8 +12,19 @@ html, body{
 
 html{
   background-color: #FEF9F2;
+  cursor: none;
 }
 
 html[data-theme="dark"]{
   background-color: #0B090A;
+}
+
+a {
+  cursor: none;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  display: flex;
 }
